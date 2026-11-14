@@ -1,0 +1,11 @@
+let day=2
+switch day{
+case1:
+   print("Monday")
+case2:
+   print("Tuesday")
+case3:
+   print("Wednesday")
+default:
+   print("Another day")
+}

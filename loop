@@ -1,0 +1,15 @@
+#range
+for i in 1...5{
+    print(i)
+}
+
+#compare
+for i in 1..<5{
+    print(i)
+}
+#while loop
+var count=1
+while count<=3{
+    print(count)
+    count+=1
+}
