@@ -1,0 +1,21 @@
+import SwiftUI
+
+struct ContentView: View {
+
+    let name = "Aruna"
+    let age = 21
+
+    var body: some View {
+
+        VStack {
+
+            Text("Student Details")
+                .font(.largeTitle)
+
+            Text("Name: \(name)")
+
+            Text("Age: \(age)")
+        }
+        .padding()
+    }
+}
