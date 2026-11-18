@@ -1,0 +1,21 @@
+import SwiftUI
+struct ContentView:View{
+    var body: some View{
+        VStack{
+            Text("Hello World")
+                .font(.largeTitle)
+                .foregroundColor(.blue)
+            Text("Welcome to SwiftUI")
+                .font(.title2)
+            Button("Click me"){
+                print("Clicked")
+            }
+            .padding()
+            .background(Colo.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .padding()
+    }
+  
+}
