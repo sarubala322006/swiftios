@@ -1,0 +1,36 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: "lock.fill")
+                .font(.system(size: 50))
+                .foregroundColor(.blue)
+            Text("Welcome Back!")
+                .font(.largeTitle)
+                .bold()
+            Text("Login to your account")
+                .foregroundColor(.gray)
+            TextField("Enter your email", text: $email)
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(10)
+            SecureField("Enter your password", text: $password)
+                .padding()
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(10)
+            Button("Login") {
+                print("Email: \(email)")
+                print("Login clicked")
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            Text("Don't have an account? Sign Up")
+                .foregroundColor(.blue)
+        }
+        .padding()
+    }
+}
