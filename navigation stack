@@ -1,0 +1,106 @@
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+
+        NavigationStack {
+
+            VStack(spacing: 20) {
+
+                Text("Welcome Home!")
+                    .font(.largeTitle)
+
+                NavigationLink(destination: ProfileView()) {
+                    Text("Go to Profile")
+                        .padding()
+                        .background(.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .navigationTitle("Home")
+        }
+    }
+}
+
+struct ProfileView: View {
+    var body: some View {
+
+        Text("Welcome to Profile")
+            .font(.title)
+            .navigationTitle("Profile")
+    }
+}
+
+
+#Students Details App
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+
+        NavigationStack {
+            VStack(spacing: 20) {
+
+                Text("Student App")
+                    .font(.largeTitle)
+                    .bold()
+
+                NavigationLink("View Students") {
+                    StudentListView()
+                }
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            .navigationTitle("Home")
+        }
+    }
+}
+
+struct StudentListView: View {
+    var body: some View {
+
+        VStack(spacing: 20) {
+
+            Text("Student List")
+                .font(.title)
+
+            NavigationLink("Arun") {
+                StudentDetailView(name: "Arun")
+            }
+
+            NavigationLink("Priya") {
+                StudentDetailView(name: "Priya")
+            }
+
+            NavigationLink("Kumar") {
+                StudentDetailView(name: "Kumar")
+            }
+        }
+        .navigationTitle("Students")
+    }
+}
+
+struct StudentDetailView: View {
+
+    let name: String
+
+    var body: some View {
+
+        VStack(spacing: 15) {
+
+            Text("Student Details")
+                .font(.title)
+
+            Text("Name: \(name)")
+                .font(.headline)
+
+            Text("Department: AI & DS")
+        }
+        .navigationTitle("Details")
+    }
+}
