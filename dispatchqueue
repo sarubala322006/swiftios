@@ -1,0 +1,20 @@
+
+import Foundation
+
+print("Program Started")
+
+DispatchQueue.global().async {
+    print("Background Task Started")
+
+    sleep(3)
+
+    print("Background Task Completed")
+
+    DispatchQueue.main.async {
+        print("Main Queue Executed")
+    }
+}
+
+print("Program Ended")
+
+RunLoop.main.run(until: Date().addingTimeInterval(4))
